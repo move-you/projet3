@@ -141,11 +141,9 @@ text-align: center;
   flex-direction: column;
   height: auto;
 
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 56px;
-  padding-bottom: 67px;
-      &__title{
+  padding: 3.5rem 1.125rem 4.125rem;
+
+  &__title{
 
       }
       &__regle{
@@ -158,12 +156,12 @@ text-align: center;
         background: antiquewhite;
 
         margin-top:1.5rem;
-        margin-left: 12.5px;
+        margin-left: 0.781rem;
 
         &__numero{
           @include flexcenter;
-          height: 25px;
-          width: 25px;
+          height: 1.563rem;
+          width: 1.563rem;
           background: brown;
           border-radius: 50%;
 
@@ -172,13 +170,73 @@ text-align: center;
         }
 
         &__icone{
-          margin-left:34px;
-          margin-right: 28px;
+          margin-left:2.125rem;
+          margin-right: 1.75rem;
         }
       }
 }
 
+/* ******************************************PARTIE RESTAURANT********************************** */
 
 
+div.restaurant{
+  display: flex;
+  flex-direction: column;
 
+  height:auto;
+  flex-basis:100%;
+  background: grey;
+
+  padding-top: 60px;
+  padding-left:20px;
+  padding-right: 20px;
+
+    &__title{
+    padding-bottom: 26px;
+    }
+    &__wrapper{
+      height:auto;
+      align-content: center;
+
+      &__cliquable {
+
+        &__container{
+          display: flex;
+          flex-direction: column;
+          height: 252px;
+          background: brown;
+          width: auto;
+          border-radius: 1rem;
+          overflow: hidden;
+          margin-bottom:18px;
+        }
+    }
+
+    }
+}
+
+//ELEMENT DU CONTAINER
+
+.restaurant__wrapper__cliquable__container{
+  &__zonetext{
+    min-height: 78px;
+    background: dodgerblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 23px;
+    padding-left: 13px;
+  }
+ &__imgcontainer{
+   flex-grow: 2;
+   overflow: hidden;
+
+   & img{
+     height: 100%;
+     width: 100%;
+     object-fit: fill;
+   }
+ }
+}
 
