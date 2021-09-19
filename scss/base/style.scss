@@ -191,14 +191,19 @@ div.restaurant{
   padding-left:20px;
   padding-right: 20px;
 
+
     &__title{
     padding-bottom: 26px;
     }
     &__wrapper{
       height:auto;
-      align-content: center;
+      padding-bottom:46px;
+
+
 
       &__cliquable {
+        display: flex;
+        margin-bottom: 18px;
 
         &__container{
           display: flex;
@@ -208,7 +213,7 @@ div.restaurant{
           width: auto;
           border-radius: 1rem;
           overflow: hidden;
-          margin-bottom:18px;
+          margin-bottom: 18px;
         }
     }
 
@@ -216,6 +221,8 @@ div.restaurant{
 }
 
 //ELEMENT DU CONTAINER
+
+
 
 .restaurant__wrapper__cliquable__container{
   &__zonetext{
