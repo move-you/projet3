@@ -1,0 +1,19 @@
+/* Terminal */
+
+/*
+installer node.js pour pouvoir installer sass
+installer sass : npm install -g sass
+générer un fichier css à partir d'un fichier scss :      sass scss/style.scss:styles/style.css --watch
+lire par le fichier déjà généré: sass scss/style.scss styles/style.css --watch
+--watch : signifie qu'on va tout le temps être à l'écoute des changements*/
+
+/* **************************** METTRE LES VARIABLE EN PREMIER ****************************
+ "_" : pour dire que c'est un module et qu'il ne faut pas le compiler et qu'on va l'importer dans un autre fichier plus grand --> */
+
+
+@import "utils/variables";  //stockages des variables
+@import "utils/mixins";       //bout de code réutilisable (avec des paramètre)
+@import "utils/placeholders"; // bout de code reutilisable (sans paramètre)
+@import "responsive"; // gestion des min-width max width
+
+
