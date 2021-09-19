@@ -1,17 +1,78 @@
-/* Error: expected "{".
- *    ,
- * 20 | hh
- *    |   ^
- *    '
- *   scss\base\style.scss 20:3  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 20 \2502  hh\a    \2502    ^\a    \2575 \a   scss\\base\\style.scss 20:3  root stylesheet';
+@charset "UTF-8";
+/* Terminal */
+/*
+installer node.js pour pouvoir installer sass
+installer sass : npm install -g sass
+générer un fichier css à partir d'un fichier scss :      sass scss/base/style.scss:styles/style.css --watch
+lire par le fichier déjà généré: sass scss/base/style.scss styles/style.css --watch
+--watch : signifie qu'on va tout le temps être à l'écoute des changements*/
+/* **************************** METTRE LES VARIABLE EN PREMIER ****************************
+ "_" : pour dire que c'est un module et qu'il ne faut pas le compiler et qu'on va l'importer dans un autre fichier plus grand --> */
+html > * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+html > * body {
+  height: auto;
+  width: 100vw;
+}
+html > * a:link {
+  text-decoration: none;
+  color: black;
+}
+html > * a:visited {
+  text-decoration: none;
+}
+html > * p {
+  margin: 0;
+}
+
+/* HEADER */
+.header__title {
+  height: 4rem;
+  background: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__title__logo {
+  height: 1.875rem;
+  width: 10rem;
+}
+.header__encart {
+  flex-direction: column;
+}
+.header__encart__localisation {
+  height: 3.125rem;
+  background: #337bc1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__encart__content {
+  height: 17.93rem;
+  background: burlywood;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__encart__content__explorebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.125rem;
+  width: 13.75rem;
+  background: blueviolet;
+}
+.header__encart__content__explorebtn__cliquable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
