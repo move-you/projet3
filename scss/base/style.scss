@@ -3,17 +3,138 @@
 /*
 installer node.js pour pouvoir installer sass
 installer sass : npm install -g sass
-générer un fichier css à partir d'un fichier scss :      sass scss/style.scss:styles/style.css --watch
-lire par le fichier déjà généré: sass scss/style.scss styles/style.css --watch
+générer un fichier css à partir d'un fichier scss :      sass scss/base/style.scss:styles/style.css --watch
+lire par le fichier déjà généré: sass scss/base/style.scss styles/style.css --watch
 --watch : signifie qu'on va tout le temps être à l'écoute des changements*/
 
 /* **************************** METTRE LES VARIABLE EN PREMIER ****************************
  "_" : pour dire que c'est un module et qu'il ne faut pas le compiler et qu'on va l'importer dans un autre fichier plus grand --> */
 
 
-@import "utils/variables";  //stockages des variables
-@import "utils/mixins";       //bout de code réutilisable (avec des paramètre)
-@import "utils/placeholders"; // bout de code reutilisable (sans paramètre)
-@import "responsive"; // gestion des min-width max width
+@import "../utils/variables";  //stockages des variables
+@import '../utils/mixins';       //bout de code réutilisable (avec des paramètre)
+@import "../utils/placeholders"; // bout de code reutilisable (sans paramètre)
+@import "../base/responsive"; // gestion des min-width max width
+
+
+
+html>* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  body {
+
+    height: auto;
+    width: 100vw;
+  }
+
+  a:link {
+    text-decoration: none;
+    color:black;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  p{
+    margin:0;
+  }
+}
+
+
+
+
+/* HEADER */
+
+.header{
+    &__title {
+
+      height:4rem;
+      background: brown;
+      @include flexcenter;
+
+      &__logo{
+        height:1.875rem;
+        width:10rem;
+      }
+    }
+
+    &__encart{
+
+      flex-direction: column;
+
+
+      &__localisation{
+
+        height: 3.125rem;
+        background: #337bc1;
+        @include flexcenter;
+
+      }
+
+      &__content{
+        height: 17.93rem;
+        background: burlywood;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        /*padding-bottom: 57px;
+        padding-top: 43px;*/
+
+      }
+
+    }
+}
+//icone de l'encart
+
+.header__encart__localisation__icone{
+margin-right:1rem;
+}
+
+//titre de l'encart
+
+.header__encart__content__title{
+  text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
+  margin-top:2.75rem;
+
+}
+
+//Description de l'encart
+
+.header__encart__content__description {
+text-align: center;
+  margin-left: 1.875rem;
+  margin-right:1.875rem;
+
+
+}
+
+//lien-bouton du header "explorebtn"
+
+.header__encart__content__explorebtn{
+  @include flexcenter;
+  height:3.125rem;
+  width:13.75rem;
+  background: blueviolet;
+  border-radius: 2rem;
+
+  margin-bottom: 3.625rem;
+    &__cliquable{
+      @include flexcenter;
+
+      height: 100%;
+      width:100%;
+
+    }
+}
+
+
+
 
 
