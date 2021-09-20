@@ -247,3 +247,45 @@ div.restaurant{
  }
 }
 
+/******************************************PARTIE FOOTER***************************************************** */
+
+
+footer{
+display: flex;
+  flex-direction: column;
+  background: cornflowerblue;
+  min-height: 197px;
+  max-height: 197px;
+
+  justify-content: space-between;
+  padding-left:24px;
+  }
+
+
+footer div.footer__logo img{
+  height: 18px;
+  width: 100px;
+}
+
+div.footer__elementseparate__textwrapper{
+  display: flex;
+  flex-direction: row;
+
+  & i{
+    margin-right:12px;
+  }
+
+}
+div.footer__logo {
+  margin-top:26px;
+  margin-bottom: 22px;
+}
+
+div.footer__elementseparate {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 37px;
+
+}
