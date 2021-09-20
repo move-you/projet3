@@ -61,6 +61,10 @@ html > * p {
   padding-top: 43px;*/
 }
 
+.header__encart__localisation__icone {
+  margin-right: 1rem;
+}
+
 .header__encart__content__title {
   text-align: center;
   margin-left: 5rem;
@@ -90,6 +94,131 @@ html > * p {
   align-items: center;
   height: 100%;
   width: 100%;
+}
+
+/* ******************************************PARTIE FONCTIONNEMENT********************************** */
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 3.5rem 1.125rem 4.125rem;
+}
+.fonctionnement__regle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  height: 4.75rem;
+  border-radius: 1rem;
+  background: antiquewhite;
+  margin-top: 1.5rem;
+  margin-left: 0.781rem;
+}
+.fonctionnement__regle__numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.563rem;
+  width: 1.563rem;
+  background: brown;
+  border-radius: 50%;
+  position: absolute;
+  left: 1.2rem;
+}
+.fonctionnement__regle__icone {
+  margin-left: 2.125rem;
+  margin-right: 1.75rem;
+}
+
+/* ******************************************PARTIE RESTAURANT********************************** */
+div.restaurant {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex-basis: 100%;
+  background: grey;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+div.restaurant__title {
+  padding-bottom: 26px;
+}
+div.restaurant__wrapper {
+  height: auto;
+  padding-bottom: 46px;
+}
+div.restaurant__wrapper__cliquable {
+  display: flex;
+  margin-bottom: 18px;
+}
+div.restaurant__wrapper__cliquable__container {
+  display: flex;
+  flex-direction: column;
+  height: 252px;
+  background: brown;
+  width: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.restaurant__wrapper__cliquable__container__zonetext {
+  min-height: 78px;
+  background: dodgerblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 23px;
+  padding-left: 13px;
+}
+.restaurant__wrapper__cliquable__container__imgcontainer {
+  flex-grow: 2;
+  overflow: hidden;
+}
+.restaurant__wrapper__cliquable__container__imgcontainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/******************************************PARTIE FOOTER***************************************************** */
+footer {
+  display: flex;
+  flex-direction: column;
+  background: cornflowerblue;
+  min-height: 197px;
+  max-height: 197px;
+  justify-content: space-between;
+  padding-left: 24px;
+}
+
+footer div.footer__logo img {
+  height: 18px;
+  width: 100px;
+}
+
+div.footer__elementseparate__textwrapper {
+  display: flex;
+  flex-direction: row;
+}
+div.footer__elementseparate__textwrapper i {
+  margin-right: 12px;
+}
+
+div.footer__logo {
+  margin-top: 26px;
+  margin-bottom: 22px;
+}
+
+div.footer__elementseparate {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 37px;
 }
 
 /*# sourceMappingURL=style.css.map */
