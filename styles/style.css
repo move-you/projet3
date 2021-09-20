@@ -8,6 +8,10 @@ lire par le fichier déjà généré: sass scss/base/style.scss styles/style.css
 --watch : signifie qu'on va tout le temps être à l'écoute des changements*/
 /* **************************** METTRE LES VARIABLE EN PREMIER ****************************
  "_" : pour dire que c'est un module et qu'il ne faut pas le compiler et qu'on va l'importer dans un autre fichier plus grand --> */
+html {
+  scroll-behavior: smooth;
+}
+
 html > * {
   box-sizing: border-box;
   padding: 0;
@@ -42,6 +46,7 @@ html > * p {
 }
 .header__encart {
   flex-direction: column;
+  max-height: 286.883px;
 }
 .header__encart__localisation {
   height: 3.125rem;
@@ -57,8 +62,32 @@ html > * p {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
   /*padding-bottom: 57px;
   padding-top: 43px;*/
+}
+.header__encart__content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.inverted-border-radius {
+  position: relative;
+  border-radius: 0;
+}
+.inverted-border-radius::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-shadow: 0 -34px 0 0 white;
 }
 
 .header__encart__localisation__icone {
@@ -94,6 +123,7 @@ html > * p {
   align-items: center;
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 /* ******************************************PARTIE FONCTIONNEMENT********************************** */
@@ -173,6 +203,7 @@ div.restaurant__wrapper__cliquable__container {
   justify-content: space-between;
   padding-right: 23px;
   padding-left: 13px;
+  color: black;
 }
 .restaurant__wrapper__cliquable__container__imgcontainer {
   flex-grow: 2;
@@ -219,6 +250,69 @@ div.footer__elementseparate {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 37px;
+}
+div.footer__elementseparate a {
+  color: white;
+}
+
+/********************************** PARTIE CARTE MENU **********************************/
+div.menucarte {
+  padding-left: 19px;
+  padding-right: 19px;
+  background: cadetblue;
+  padding-bottom: 0.001rem;
+}
+div.menucarte__enseigne {
+  display: flex;
+  background: darkcyan;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+div.menucarte__enseigne i {
+  margin-right: 23px;
+}
+
+div.menucarte__menupart {
+  height: auto;
+  min-height: 10px;
+  margin-bottom: 42px;
+}
+div.menucarte__menupart__title {
+  text-transform: uppercase;
+}
+div.menucarte__menupart__title__specialborder {
+  height: 3px;
+  width: 40px;
+  background: green;
+  margin-top: 9px;
+}
+div.menucarte__menupart__vignetteswrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+div.menucarte__menupart__vignetteswrapper__vignettecarte {
+  height: 38px;
+  background: aquamarine;
+  border-radius: 1rem;
+  display: flex;
+  align-content: space-between;
+  padding: 15px 23px 15px 10px;
+  margin-top: 14px;
+}
+div.menucarte__menupart__vignetteswrapper__vignettecarte__vignettecartewrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+div.menucarte__menupart__vignetteswrapper__vignettecarte__vignettecartewrapper__vignettecomplement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
