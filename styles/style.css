@@ -280,6 +280,9 @@ div.menucarte {
   padding-right: 19px;
   background: cadetblue;
   padding-bottom: 0.001rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 div.menucarte__enseigne {
   display: flex;
@@ -290,6 +293,24 @@ div.menucarte__enseigne {
 }
 div.menucarte__enseigne i {
   margin-right: 23px;
+}
+div.menucarte__boutoncentrer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 83px;
+}
+div.menucarte__boutoncentrer__commanderbtn {
+  width: 180px;
+  height: 50px;
+  border-radius: 2rem;
+  background: blueviolet;
+}
+div.menucarte__boutoncentrer__commanderbtn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
 }
 
 div.menucarte__menupart {
