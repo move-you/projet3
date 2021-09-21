@@ -33,9 +33,28 @@ html > * p {
 }
 
 /* HEADER */
+.header {
+  position: relative;
+}
 .header__title {
   height: 4rem;
   background: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__title__cliquable {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+}
+.header__title__cliquable__arrowreturn {
+  position: absolute;
+  left: 0;
+  height: 64px;
+  width: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
